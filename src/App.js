@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { HashRouter as BrowserRouter, Routes, Route } from 'react-router-dom';
+import TodoList from './Components/TodoList/TodoList';
+import ContactForm from './Components/ContactForm/ContactForm';
+import Home from './Components/Home/Home';
+import Navbar from './Components/Navbar/Navbar';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <BrowserRouter>
+              <header className="App-header">
+                  <h1>Task Blast</h1>
+              </header>
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/TodoList" element={<TodoList/>} />
+                <Route path="/contact" element={<ContactForm />} />
+              </Routes>
+          </BrowserRouter>
+      <main>
+      
+      </main> 
     </div>
   );
 }

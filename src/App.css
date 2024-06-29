@@ -1,22 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS'
+}
+
+body {
+  background-color:rgba(100, 115, 255);
+}
+
 .App {
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(128, 0, 128, 1) 0%,
+    rgba(255, 84, 17, 1) 100%);
+  height: 100px;
   display: flex;
+  gap: 8px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,15 +30,48 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 32px;
+  color: #fff;
+  font-size: 44px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background-color: rgb(22, 26, 43);
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+
+
+.todo-container {
+  display: flex;
+}
+
